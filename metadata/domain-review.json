@@ -1,0 +1,73 @@
+{
+  "repo": "copper-dev-deps-deck",
+  "language": "Rust",
+  "category": "Developer tools",
+  "goal": "Build a Rust toolkit that studies deps behavior through safe and unsafe fixtures, with remediation hints and explicit failure cases.",
+  "review_model": {
+    "terms": [
+      "change width",
+      "diagnostic quality",
+      "review cost",
+      "safe rewrite"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "change width",
+      "signal": 57,
+      "slack": 42,
+      "drag": 23,
+      "confidence": 56,
+      "score": 143,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "diagnostic quality",
+      "signal": 45,
+      "slack": 25,
+      "drag": 31,
+      "confidence": 72,
+      "score": 94,
+      "lane": "hold"
+    },
+    {
+      "name": "edge",
+      "focus": "review cost",
+      "signal": 46,
+      "slack": 50,
+      "drag": 14,
+      "confidence": 76,
+      "score": 176,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "safe rewrite",
+      "signal": 79,
+      "slack": 54,
+      "drag": 27,
+      "confidence": 52,
+      "score": 183,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "change width",
+      "signal": 60,
+      "slack": 28,
+      "drag": 14,
+      "confidence": 84,
+      "score": 190,
+      "lane": "ship"
+    }
+  ]
+}
