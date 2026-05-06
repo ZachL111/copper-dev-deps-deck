@@ -1,0 +1,17 @@
+{
+  "repo": "copper-dev-deps-deck",
+  "thresholds": {
+    "signal": 2,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 2,
+    "ship": 198,
+    "watch": 118
+  },
+  "terms": [
+    "change width",
+    "diagnostic quality",
+    "review cost",
+    "safe rewrite"
+  ]
+}

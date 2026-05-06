@@ -61,3 +61,9 @@ foreach ($pathPattern in $knownPaths) {
 cargo test
 
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-copper-dev-deps-detail.ps1
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-copper-dev-deps-properties.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-copper-dev-deps-golden.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
